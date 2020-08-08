@@ -1,0 +1,1 @@
+SELECT * FROM `sdk_db`.`users`;

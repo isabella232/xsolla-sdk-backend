@@ -1,0 +1,6 @@
+# IDE stuff
+*.idea
+# NodeJS stuff
+*/node_modules/*
+# project generated files
+api/flatten_swagger.yaml

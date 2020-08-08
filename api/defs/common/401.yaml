@@ -1,0 +1,11 @@
+type: "object"
+properties:
+  code:
+    type: "string"
+    example: "003-001"
+    description: "Error code"
+    maxLength: 10
+  description:
+    type: "string"
+    example: "Wrong email format"
+    maxLength: 100

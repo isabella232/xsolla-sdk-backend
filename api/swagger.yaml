@@ -1,0 +1,47 @@
+swagger: "2.0"
+info:
+  description: "This is example server implementing some demonstration functions"
+  version: "0.0.1"
+  title: "Xsolla Sdk Backend"
+  contact:
+    email: "integration@xsolla.com"
+host: "localhost:8080"
+basePath: "/"
+tags:
+  - name: "Xsolla SDK Backend"
+    description: "Working with Xsolla Backend."
+schemes:
+  - "http"
+paths:
+  /healthcheck:
+    $ref: "paths/healthcheck.yaml"
+  /login:
+    post:
+      tags:
+        - "login"
+      summary: "Create or login user by email and return access token"
+      operationId: "login"
+      consumes:
+        - "application/json"
+      produces:
+        - "application/json"
+      parameters:
+        - in: "body"
+          name: "body"
+          description: "Credentials"
+          required: true
+          schema:
+            $ref: 'defs/login/credentials.yaml'
+      responses:
+        "200":
+          description: "User access token received"
+          schema:
+            $ref: 'defs/login/AccessToken.yaml'
+        "400":
+          description: "Incorrect request parameters"
+          schema:
+            $ref: 'defs/common/404.yaml'
+        "401":
+          description: "Incorrect authorization data"
+          schema:
+            $ref: 'defs/common/401.yaml'

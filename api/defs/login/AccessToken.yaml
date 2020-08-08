@@ -1,0 +1,7 @@
+type: "object"
+properties:
+  access_token:
+    type: "string"
+    example: "eop57k1boA7nnYPtewZ6KEXJyJADEwRT"
+    maxLength: 255
+    description: "User's access token"

@@ -1,0 +1,11 @@
+get:
+  description: Healthcheck
+  tags:
+    - Healthcheck
+  summary: Healthcheck application
+  operationId: healthcheck
+  responses:
+    "200":
+      description: Service available.
+    "503":
+      description: Service unavailable.
